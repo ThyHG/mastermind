@@ -1,0 +1,53 @@
+<script>
+console.log("hoi");
+
+var refArray = [];
+
+for ( y = 0 ; y < 4 ; y++){
+refArray.push(Math.floor(Math.random() * 6 +1));
+}
+
+var input = {
+	tryOne: ["a","b","c","c"],
+	tryTwo: [1,5,2,3],
+	tryThree: [6,3,5,1]
+};
+
+var compareObjects = function (dingB) {
+	var dingA = refArray.slice('');
+	var result = {
+		ok: 0,
+		maybe: 0,
+		err: 0
+	};
+
+	console.log("De referentie is " + refArray);
+	console.log("De input is " + dingB);
+
+	for (var j = 0 ; j < dingA.length ; j++){
+		if (dingA[j] == dingB[j]){
+		//	console.log("Dit is gelijk");
+			result.ok++
+			delete dingA[j];
+			delete dingB[j];
+		} 
+	}
+	for (var k = 0 ; k < dingA.length ; k++){
+		if ( k in dingB && dingA.indexOf(dingB[k]) > -1) {
+			//	console.log("Dit is niet gelijk, maar komt wel voor")
+			result.maybe++
+			delete dingA[dingA.indexOf(dingB[k])];
+			delete dingB[k];
+		}
+	}
+	
+	result.err = 4 - result.ok - result.maybe;
+	console.log(result);
+	console.log('');
+	return result;
+};
+
+compareObjects(input.tryThree);
+compareObjects(input.tryTwo);
+compareObjects(input.tryOne);
+</script>
