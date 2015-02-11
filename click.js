@@ -1,4 +1,15 @@
 console.log("hoi");
+//these are quite ugly, but will serve as explanation for now
+$(document).on("click", ".toggleExplanation", function(e){
+    e.preventDefault;
+    $(".explanationText").toggle();
+});
+
+$(document).on("click", ".explanationText", function(e){
+    e.preventDefault;
+    $(".explanationText").toggle();
+});
+//end of previous message
 
 $(document).on("click" , "#choice", function(e){
 	$('.beurt :checked ~span').css("background", $('#choice :checked').val());

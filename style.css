@@ -1,11 +1,31 @@
 *{
 	margin:0px;
 	padding:0px;
+	font-family: Arial;
+}
+
+.explanation{
+	line-height: 1.5;
+	padding:10px 0px 5px 0px;
+}
+
+.explanationText{
+	display:none;
+	position:absolute;
+	background:#D4D4D4;
+	padding:0px 10px 0px 20px;
+	z-index:1;
+	max-width:300px;
+}
+
+.explanation li{
+	padding-bottom:15px;
 }
 
 .wrap{
 	max-width:500px;
 	margin:0 auto;
+	min-width:500px;
 }
 
 label input[type=radio]{
