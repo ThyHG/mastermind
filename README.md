@@ -1,5 +1,8 @@
 # mastermind
 
-Sweet as pie.
+This is my repo to learn how to git.
+Also I'm learning how to write front-end stuff.
 
-This is a branch pie.
+All of this good stuff while making a clone of the puzzle game Mastermind.
+
+http://jonspru.yt
